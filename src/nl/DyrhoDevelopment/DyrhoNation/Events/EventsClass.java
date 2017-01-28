@@ -28,19 +28,22 @@ public class EventsClass implements Listener {
 
 		Player p = e.getPlayer();
 		if (!(p.hasPlayedBefore())) {
+
 			e.setJoinMessage(prefix + "§aWelkom " + p.getName() + " op de server!");
 			meta.setDisplayName("§bWelkom boek!");
 			ArrayList<String> lore = new ArrayList<String>();
 			lore.add("§fLees dit voor instructies & regels!");
 			meta.setLore(lore);
 			item1.setItemMeta(meta);
+			p.setWalkSpeed(5);
 
 			p.getInventory().setItem(0, item1);
 		} else {
 			e.setJoinMessage(prefix + "§bWelkom terug " + p.getName() + "!");
+			
 		}
 
-		Location spawn = new Location(p.getWorld(), -239.546, 67, 275.384);
+		Location spawn = new Location(p.getWorld(), -239.546, 79, 275.384);
 		p.teleport(spawn);
 
 		// ==================
