@@ -18,9 +18,6 @@ public class PlayerQuitMessage implements Listener {
 		
 		if(p.hasPermission("dyrhonation.leave.permmessage")) {
 			e.setQuitMessage(prefix + "§4§l" +  p.getName() + " §bheeft de server verlaten");
-		
-		
-
 			
 		}
 	}
